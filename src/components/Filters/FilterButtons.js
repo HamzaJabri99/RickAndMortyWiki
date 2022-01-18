@@ -14,7 +14,7 @@ function FilterButtons({ name, item, index, queue, setPageNumber }) {
           }
         `}
       </style>
-      <div className="form-check active ">
+      <div className="form-check  ">
         <input
           onClick={() => {
             setPageNumber(1);

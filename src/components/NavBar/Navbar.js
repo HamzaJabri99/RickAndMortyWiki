@@ -1,12 +1,13 @@
 import React from "react";
-
-function Navbar() {
+import App from "../../App.css";
+import { NavLink, Link } from "react-router-dom";
+let Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <div className="container-fluid">
-        <a className="navbar-brand" href="#">
-          Navbar
-        </a>
+      <div className="container">
+        <Link to="/" className="fs-1 ubuntu navbar-brand">
+          Rick & Morty <span className="text-primary">Wiki</span>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -16,33 +17,48 @@ function Navbar() {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span className="navbar-toggler-icon"></span>
+          <style>
+            {`
+                          button[aria-expanded="false"] > .close{
+                              display:none;
+                          }
+                          button[aria-expanded="true"]>.open{
+                              display:none;
+                          }
+                          `}
+          </style>
+          <i className="fas fa-bars open text-primary"></i>
+          <i className="fas fa-times close text-dark"> </i>
         </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
+        <div
+          className="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
           <ul className="navbar-nav">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
-                Home
-              </a>
+              <NavLink
+                activeClassName={`${App.active}`}
+                to="/"
+                className="nav-link fs-5 "
+              >
+                Characters
+              </NavLink>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
-                Features
-              </a>
+              <NavLink to="/episodes" className="nav-link fs-5">
+                Episodes
+              </NavLink>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
-                Pricing
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link disabled">Disabled</a>
+              <NavLink to="/location" className="nav-link fs-5">
+                Location
+              </NavLink>
             </li>
           </ul>
         </div>
       </div>
     </nav>
   );
-}
+};
 
 export default Navbar;
