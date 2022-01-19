@@ -37,7 +37,7 @@ let Navbar = () => {
           <ul className="navbar-nav">
             <li className="nav-item">
               <NavLink
-                activeClassName={`${App.active}`}
+                activeclassname={`${App.active}`}
                 to="/"
                 className="nav-link fs-5 "
               >
@@ -50,7 +50,7 @@ let Navbar = () => {
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to="/location" className="nav-link fs-5">
+              <NavLink to="/locations" className="nav-link fs-5">
                 Location
               </NavLink>
             </li>

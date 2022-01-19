@@ -9,7 +9,7 @@ import Search from "./components/Search/Search.js";
 import Navbar from "./components/NavBar/Navbar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Episodes from "./Pages/Episodes";
-import Location from "./Pages/Location";
+import Location from "./Pages/Locations";
 function App() {
   return (
     <Router>
@@ -19,7 +19,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/episodes" element={<Episodes />} />
-        <Route path="/location" element={<Location />} />
+        <Route path="/locations" element={<Location />} />
       </Routes>
     </Router>
   );
