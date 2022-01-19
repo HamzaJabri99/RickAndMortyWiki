@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Cards from "../components/Cards/Cards";
-import Episode from "../components/Filters/Category/Episode";
+import Episode from "../components/Filters/Category/Episode_Location";
 
 const Episodes = () => {
   let [id, setId] = useState(1);
@@ -39,7 +39,7 @@ const Episodes = () => {
 
         <div className="col-8">
           <div className="row">
-            <Cards results={results} />
+            <Cards page="/episodes/" results={results} />
           </div>
         </div>
       </div>
