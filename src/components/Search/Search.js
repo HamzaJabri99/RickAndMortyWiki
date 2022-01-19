@@ -6,7 +6,7 @@ function Search({ setSearch, setPageNumber }) {
       onSubmit={(e) => {
         e.preventDefault();
       }}
-      className="d-flex justify-content-center gap-5 my-4"
+      className="d-flex flex-sm-row flex-column align-items-center justify-content-center gap-5 my-4"
     >
       <input
         onChange={(e) => {

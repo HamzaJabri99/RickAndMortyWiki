@@ -19,8 +19,6 @@ function FilterButtons({ name, item, index, queue, setPageNumber }) {
           onClick={() => {
             setPageNumber(1);
             queue(item);
-
-            console.log(item);
           }}
           className="form-check-input active"
           type="radio"

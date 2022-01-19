@@ -42,7 +42,6 @@ const Home = () => {
     (async function () {
       let data = await fetch(api).then((res) => res.json());
       setFetchedData(data);
-      console.log(data);
     })();
   }, [api]);
 
@@ -61,7 +60,7 @@ const Home = () => {
             setSpecies={setSpecies}
           ></Filters>
 
-          <div className="col-8">
+          <div className="col-lg-8 col-12">
             <div className="row">
               <Cards page="/" results={results} />
             </div>
